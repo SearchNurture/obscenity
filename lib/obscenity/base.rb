@@ -56,6 +56,7 @@ module Obscenity
         when :stars  then '*' * word.size
         when :nonconsonants then word.gsub(/[^bcdfghjklmnpqrstvwxyz]/i, '*')
         when :default, :garbled then '$@!#%'
+        when :keep_first_letter then 'yes!!'
         else content
         end
       end
